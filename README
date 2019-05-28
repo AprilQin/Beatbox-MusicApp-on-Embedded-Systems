@@ -1,5 +1,14 @@
-Steps run this application:
+A simple beatbox application with three rhythms.
+
+The web user interface is created in nodejs, html & jquery.
+
+The backend beatbox music app is created in C and communicate with the web through UDP.
+
+
+
+Steps run this application (on beaglebone):
 
 1. make
 2. node server.js
 3. go to localhost:3042 on browser
+
