@@ -1,0 +1,6 @@
+Steps run this application:
+
+1. make
+2. cd ~/cmpt433/public/myApps/beatbox-server-copy
+3. node server.js
+4. go to localhost:3042 on browser

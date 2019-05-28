@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	<title>BeagleBone Beat-Box</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- sock io 2.1.1 enabled on browser side, jquery to read and write to html elements-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
+	<script src='https://code.jquery.com/jquery-1.8.0.min.js' type='text/javascript'></script> 
+	<script src='udp_client.js' type='text/javascript'></script> <!-- sock io browser side logic -->
+</head>
+
+<body>
+	<form>
+		<h1>BeagleBone Beat-Box</h1>
+		<div>by April Qin!</div>
+		
+		<div id="content">
+			<div id="status-box">
+				<h2>BeatBox's Status</h2>
+				<div id="status">None yet...</div>
+			</div>
+			
+			<div id="left-box">
+				<div id="modediv">
+					<!-- select drum beat -->
+					<h2>Drum Beat Selection</h2>
+					<p>Current drum beat mode is: <strong><span id="modeid">rock</span></strong></p>
+					<p>
+						<input id="modeNone" value="None" type="button">
+						<input id="modeRock1" value="Standard Rock" type="button">
+						<input id="modeRock2" value="Custom Rock" type="button">
+					</p>
+					<h2>Volume</h2>
+					<p>
+						<input id="volumeDown" value=" -5 " type="button">
+						<input id="volumeid" value="80" size="3" readonly="readonly" type="text">
+						<input id="volumeUp" value=" +5 " type="button">
+						(0 - 100)
+					</p>
+					<h2>Tempo</h2>
+					<p>
+						<input id="tempoDown" type="button" value=" -5 ">
+						<input id="tempoid" value="120" size="3" readonly="readonly" type="text">
+						<input id="tempoUp" type="button" value=" +5 ">
+						(40 - 300)
+					</p>
+
+				</div>
+				
+			</div>
+			
+			<!-- select sound -->
+			<div id="sound-box">
+				<h2>Select a sound to play</h2>
+				<br>
+				<input id="hihat" type="button" value="hihat" class="sound">
+				<input id="snare" type="button" value="snare" class="sound">
+				<input id="base" type="button" value="base" class="sound">
+				<input id="kick" type="button" value="kick" class="sound">
+				<input id="airdrum1" type="button" value="airdrum1" class="sound">
+				<input id="airdrum2" type="button" value="airdrum2" class="sound">
+				<input id="airdrum3" type="button" value="airdrum3" class="sound">
+			</div>
+
+			<div id="error-box">
+				<h2>Server Error</h2>
+				<p>Server error detected. Please resolve error before continuing.</p>
+				<div><code id="error-text">No error yet... did you hide this div correctly via Javascript? :)</code></div>
+			</div>
+
+		</div>
+	</form>
+<!-- test -->
+<!-- 	<script>
+		$(function(){
+			// console.log('ready');
+			$("#hihat").click(function(){
+				console.log('hihat button clicked');
+				$("#error-box").css({opacity:'0.5'});
+			});
+		});
+	</script> -->
+</body>
+
+</html>
