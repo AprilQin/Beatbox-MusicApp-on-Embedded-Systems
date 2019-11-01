@@ -3,6 +3,6 @@
 	"version": "0.0.1",
 	"description": "Node.js server.",
 	"dependencies": {
-	"mime": "~1.2.7"
+	"mime": "~2.4.4"
 	}
 }
