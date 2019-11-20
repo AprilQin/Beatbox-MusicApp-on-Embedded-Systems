@@ -1,8 +1,9 @@
-A simple beatbox application with three rhythms.
+Beatbox Application:
 
-The web user interface is created in nodejs, html & jquery.
-
-The backend beatbox music app is created in C and communicate with the web through UDP.
+This is a simple beatbox application with three rhythms. The application has a user interface written in nodejs, html & jquery.
+The backend beatbox music app is written in C and communicate with the front end web user interface through UDP protocol. When the backend application starts,
+it creates two threads, one thread for continuously playing the musical beats, another thread for listening to UDP messages that is comming from
+the front end user interface.
 
 
 
