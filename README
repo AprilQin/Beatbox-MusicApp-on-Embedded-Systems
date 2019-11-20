@@ -1,15 +1,16 @@
 Beatbox Application:
 
 This is a simple beatbox application with three rhythms. The application has a user interface written in nodejs, html & jquery.
-The backend beatbox music app is written in C and communicate with the front end web user interface through UDP protocol. When the backend application starts,
-it creates two threads, one thread for continuously playing the musical beats, another thread for listening to UDP messages that is comming from
-the front end user interface.
+The backend beatbox music app is written in C and communicates with the front end web user interface through UDP protocol. 
+When the backend application starts, it creates two threads, one thread for continuously playing the musical beats, another thread 
+for listening to UDP messages that is comming from the front end user interface.
 
+This application was created for and tested on Embedded system beaglebone. Joystick was used to control the application. 
+Press in to change rhythm. Press up and down to adjust volumn. Press left and right to adjust the speed of the music.
 
+To run this application (on beaglebone), do the following three steps.
 
-Steps run this application (on beaglebone):
-
-1. make
-2. node server.js
+1. run make compile the backend C application
+2. node server.js to start the frontend web user interface
 3. go to localhost:3042 on browser
 
